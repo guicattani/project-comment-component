@@ -1,0 +1,15 @@
+p style="color: green" = notice
+
+div
+  == render "buttons"
+== render @project
+
+br
+br
+div
+  == render "new_comment"
+
+  - if @project.activities.any?
+      == render "activity"
+  - else
+    == render "no_activities"

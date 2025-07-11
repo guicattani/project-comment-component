@@ -15,7 +15,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_07_10_180659) do
   enable_extension "pg_catalog.plpgsql"
 
   create_table "activities", force: :cascade do |t|
-    t.string "content", null: false
+    t.jsonb "content", null: false
     t.string "type", null: false
     t.bigint "activity_id"
     t.string "activitable_type", null: false
@@ -40,6 +40,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_07_10_180659) do
 
   create_table "users", force: :cascade do |t|
     t.string "name"
+    t.string "color", default: "sky", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

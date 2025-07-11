@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :comments, controller: "activities", type: "Comment"
+  resources :comments, only: [ :edit, :create, :update, :destroy ]
   resources :projects
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

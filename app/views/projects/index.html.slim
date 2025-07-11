@@ -1,0 +1,14 @@
+p style="color: green" = notice
+
+strong
+  = link_to "+ New project", new_project_path
+br
+h1 Existing projects:
+br
+#projects.grid.grid-cols-2.gap-4
+  - @projects.each do |project|
+    p
+      strong
+        = project.name
+    p
+      = link_to "Show this project", project

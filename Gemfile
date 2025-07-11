@@ -13,9 +13,9 @@ gem "tailwindcss-rails"
 # Use Slim (template engine)
 gem "slim-rails"
 # Hotwire Javascript on Turbo
-gem 'turbo-rails'
+gem "turbo-rails"
 # Hotwire Javascript/HTML helper
-gem 'stimulus-rails'
+gem "stimulus-rails"
 # Javascript imports
 gem "importmap-rails", "~> 2.1"
 # ENV variables
@@ -28,11 +28,11 @@ group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
 
-  # Fake database data creator
-  gem 'faker'
-
   # Easily create Database objects that respect Active Record
-  gem 'factory_bot_rails'
+  gem "factory_bot_rails"
+
+  # Fake database data creator
+  gem "faker"
 end
 
 group :development do
@@ -51,14 +51,14 @@ end
 
 group :test do
   # Database Cleaner to ensure clean databases for test runs
-  gem 'database_cleaner-active_record', '>= 2.2.0'
+  gem "database_cleaner-active_record", ">= 2.2.0"
 
-  # RSPEC Testing gem for Rails 
+  # RSPEC Testing gem for Rails
   gem "rspec-rails"
 
   # ActiveRecord model validators
-  gem 'shoulda-matchers', require: false
+  gem "shoulda-matchers", require: false
 
   # Coverage report
-  gem 'simplecov'
+  gem "simplecov"
 end
