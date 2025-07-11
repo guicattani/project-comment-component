@@ -1,8 +1,5 @@
 class CommentsController < ApplicationController
-  before_action :set_comment, only: %i[ edit update destroy ]
-  # GET /comments/1/edit
-  def edit
-  end
+  before_action :set_comment, only: %i[ destroy ]
 
   # POST /comments
   def create
@@ -12,15 +9,6 @@ class CommentsController < ApplicationController
       redirect_to activitable_path, notice: "Comment was successfully created."
     else
       render activitable_path, status: :unprocessable_entity
-    end
-  end
-
-  # PATCH/PUT /comments/1
-  def update
-    if @comment.update(comment_params)
-      redirect_to @comment, notice: "Comment was successfully updated.", status: :see_other
-    else
-      render :edit, status: :unprocessable_entity
     end
   end
 

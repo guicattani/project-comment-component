@@ -61,4 +61,9 @@ group :test do
 
   # Coverage report
   gem "simplecov"
+
+  # Run rspec tests on file change
+  gem "rspec-watcher"
 end
+
+gem "dockerfile-rails", ">= 1.7", :group => :development
