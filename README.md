@@ -1,4 +1,12 @@
-## Project Comment Component
+# Project Comment Component
+
+## How to run
+- Create the database with `bundle exec rails db:create`
+- Migrate it with `bundle exec rails db:migrate`
+- Run `bin/dev` to run foreman (Run Tailwind builder and Rails in the same daemon)
+
+## Testing
+- `bundle exec rspec` or `RAILS_ENV=test bundle exec rake rspec_watcher:watch`
 
 ## Caveats
 This code is supposed to be easily reviewed and was created without Rails boilerplate (using `--minimal`), therefore if this was to be a serious application we'd need [improvements](#improvements)
@@ -26,14 +34,29 @@ This code is supposed to be easily reviewed and was created without Rails boiler
   - User owned projects that only they can edit
   - Allow user to change their "color" or image
 - Add an admin user that can delete any comment
+- There's no way of editing the Comments currently
 - UUID for models
   - The users seeing the `/:id` at the end of routes is not so great
 - Add Turbo and Stimulus (already installed, so we are only using the progress bar)
 - Add a footer/header
-- ActivityCreator for project changes is still a bit messy
+- StatusUpdateCreator for project changes is still a bit messy
 - Seeds are placeholders
 - Create a Hash that has `diff` (deprecated in the past so the function that does this looks weird)
 - Improve logging (.log is insufficient). I'd suggest a third party service like Rollbar or even Newrelic (plays nicely with Heroku!)
+- Improve Rubocop rules, it's currently using the most basic set
+- Integration tests and missing tests
+  - Test concern
+- There's an ambiguous spec error when running in the current ruby versions. This started when we added `foreman`
+```
+  - WARN: Unresolved or ambiguous specs during Gem::Specification.reset:
+        stringio (>= 0)
+        Available/installed versions of this gem:
+        - 3.1.7
+        - 3.1.2
+        - 3.1.1
+        - 3.1.0
+```
+
 
 ### Credits
 
