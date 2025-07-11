@@ -1,4 +1,4 @@
-require_relative "../services/activity_creator"
+require_relative "../services/status_update_creator"
 class ProjectsController < ApplicationController
   before_action :set_project, only: %i[ show edit update destroy ]
   before_action :cache_changes, only: %i[ update ]
