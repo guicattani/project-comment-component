@@ -23,6 +23,8 @@ This code is supposed to be easily reviewed and was created without Rails boiler
   - A: We can simply change `ProjectsController::CREATE_ACTIVITY_ON_CHANGE` or even install `papertrail`
 - Q: How do we see the soft deleted records?
   - A: We don't have an admin dashboard of sorts so we can only see them using `unscope` in the `rails console`
+- Q: Why is Activity polymorphic?
+  - A: We can make activities in all sorts of models with this approach. I think the next step would be to have an Epic, or Initiative or something similar to the already existing Project. :)
 
 ## Improvements
 - Restate modern Rails security guidelines
