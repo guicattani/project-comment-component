@@ -48,6 +48,7 @@ This code is supposed to be easily reviewed and was created without Rails boiler
 - Improve Rubocop rules, it's currently using the most basic set
 - Integration tests and missing tests
   - Test concern
+  - Use shared examples for soft deletables
 - There's an ambiguous spec error when running in the current ruby versions. This started when we added `foreman`
 ```
   - WARN: Unresolved or ambiguous specs during Gem::Specification.reset:
