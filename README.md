@@ -27,6 +27,7 @@ This code is supposed to be easily reviewed and was created without Rails boiler
   - A: We can make activities in all sorts of models with this approach. I think the next step would be to have an Epic, or Initiative or something similar to the already existing Project. :)
 
 ## Improvements
+- **Finish the UI (at the moment, only the project show page is with an OK template)**
 - Restate modern Rails security guidelines
   - e.g. having `config/initializers/content_security_policy.rb`
 - Improve accessibility/usage with i18n/locale support
